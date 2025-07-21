@@ -66,7 +66,7 @@ npm run dev
 ```
 ---
 
-##Folder Structure
+## Folder Structure
 
 ```bash
 src/
