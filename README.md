@@ -1,12 +1,79 @@
-# React + Vite
+# 🌤️ Veara – Forecasting Tomorrow, Today
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Veara** is a visually engaging, responsive React weather app that displays real-time weather conditions and short-term forecasts using the OpenWeatherMap API. Designed with Tailwind CSS and enhanced with interactive icons and toast notifications, it offers a smooth and modern user experience.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Live Site](https://your-deployment-link.com)  
+👉 [GitHub Repository](https://github.com/Ashwin-RH/weather-app)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## 📸 Preview
+
+> Add a screenshot named `preview.png` in your project root to enable preview here
+
+![Preview](./preview.png)
+
+---
+
+## 🚀 Features
+
+- 🔍 **City-based search** with keyboard support
+- 🌡️ **Current weather info** (temperature, condition, location)
+- 🧊 **Humidity** and 🌬️ **Wind speed** data
+- 📆 **3-hour interval forecast** (next 5 slots)
+- ⏳ **Loading spinner** while fetching data
+- 🔔 **User-friendly error handling** using toast messages
+- ⚡ **Stylish UI** with animated blurred background
+- 📱 Fully **responsive** design
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+- **API:** [OpenWeatherMap](https://openweathermap.org/)
+- **UI Enhancements:** React Icons, React Hot Toast
+- **Build Tool:** Vite
+
+---
+
+## 🧑‍💻 Local Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/Ashwin-RH/weather-app.git
+cd weather-app
+```
+
+2.**Install dependencies**
+
+```bash
+npm install
+```
+
+3.**Set up API key**
+
+```bash
+VITE_APP_ID=your_openweathermap_api_key
+```
+4.**Start the app**
+
+```bash
+npm run dev
+```
+
+```bash
+src/
+├── assets/            # Static icons
+├── components/
+│   └── Weather.jsx    # Main weather component
+├── App.jsx
+├── main.jsx
+└── index.css          # Tailwind styling
+```
+
