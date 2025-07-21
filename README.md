@@ -7,8 +7,6 @@
 👉 [Live Site](https://your-deployment-link.com)  
 👉 [GitHub Repository](https://github.com/Ashwin-RH/weather-app)
 
-
-
 ---
 
 ## 📸 Preview
@@ -66,8 +64,10 @@ VITE_APP_ID=your_openweathermap_api_key
 ```bash
 npm run dev
 ```
+---
 
-**Folder Structure**
+##Folder Structure
+
 ```bash
 src/
 ├── assets/            # Static icons
