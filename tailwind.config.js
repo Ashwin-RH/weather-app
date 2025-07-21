@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         edu: ['"Edu NSW ACT Cursive"', 'cursive'],
+        poppins: ['"Poppins"', 'sans-serif'],
+        press: ['"Press Start 2P"', 'cursive'],
+        truculenta: ['"Truculenta"', 'sans-serif'],
       },
     },
   },

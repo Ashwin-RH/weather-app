@@ -110,9 +110,9 @@ return(
 <div className='absolute w-[150px] h-[150px] z-0 top-50 left-130 rounded-full bg-blue-300/30 hover:bg-blue-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='absolute w-[150px] h-[150px] z-0 top-22 left-140 rounded-full bg-indigo-300/30 hover:bg-indigo-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='absolute w-[150px] h-[150px] z-0 top-40 left-160 rounded-full bg-cyan-200/30 hover:bg-cyan-100/50 blur-2xl hover:scale-105 transition duration-500' />
-        <p className='text-center text-white mb-5'><span className='font-medium text-2xl '>Veara</span> :<br/> <span className='text-gray-300 text-lg font-light'>Forecasting Tomorrow, Today</span></p>
+      <p className='text-center text-white mb-5'><span style={{ fontFamily: '"Edu NSW ACT Cursive", cursive', fontSize: '28px'  }}>Veara</span> <br/> <span className='text-gray-300 text-lg font-light' style={{ fontFamily: ['"Truculenta"', 'sans-serif'], fontSize: '22px'  }}>Forecasting Tomorrow, Today</span></p>
      {/* Weather Card */}
-    <div className="z-10 relative bg-black/40  border border-gray-200/40 backdrop-blur-[4px]  rounded-2xl shadow-2xl ">
+    <div className="z-10 relative bg-gradient-to-br from-black/30 to-black/50  border border-gray-200/40 backdrop-blur-[4px]  rounded-2xl shadow-2xl ">
     
     {/* Search bar */}
     <div className=" flex items-center justify-center gap-2 mx-4 mt-4 md:mx-5 md:mt-3">
@@ -173,7 +173,7 @@ return(
   </div>
   
       {forecastData.length > 0 && (
-  <div className="w-80 md:w-90 max-w-full px-1 pb-3 md:px-5 md:pb-5 bg-black/40 border border-gray-200/40 mt-3 rounded-lg backdrop-blur-[4px] shadow-xl shadow-black/30">
+  <div className="w-80 md:w-90 max-w-full px-1 pb-3 md:px-5 md:pb-5 bg-gradient-to-br from-black/30 to-black/50 border border-gray-400/40 mt-3 rounded-lg backdrop-blur-[4px] shadow-2xl shadow-black/50">
     <h2 className=" text-white text-lg font-semibold mb-2 text-center">Next Forecast</h2>
     <div className="flex justify-between gap-2 overflow-x-auto scrollbar-hide hover:scale-102 transition duration-500 cursor-pointer">
       {forecastData.map((item, index) => (
@@ -192,7 +192,7 @@ return(
   
 )}
 <footer className="fixed bottom-2  mt-5 p-2 flex flex-col items-center text-gray-300">
-  <div className="text-center hover:text-gray-100 font-medium">Ashwin Haragi</div>
+  <div className="text-center hover:text-gray-100 font-medium" >Ashwin Haragi</div>
   <div className="flex justify-center gap-4 mt-1 text-gray-400 text-sm">
     <a
       href="https://github.com/ashwinharagi"
