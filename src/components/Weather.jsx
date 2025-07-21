@@ -195,7 +195,7 @@ return(
   <div className="text-center hover:text-gray-100 font-medium" >Ashwin Haragi</div>
   <div className="flex justify-center gap-4 mt-1 text-gray-400 text-sm">
     <a
-      href="https://github.com/ashwinharagi"
+      href="https://github.com/Ashwin-RH"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-white transition"
@@ -203,7 +203,7 @@ return(
       <FiGithub size={20} />
     </a>
     <a
-      href="https://linkedin.com/in/ashwinharagi"
+      href="https://www.linkedin.com/in/ashwin-rh-aa263b217"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-white transition"
