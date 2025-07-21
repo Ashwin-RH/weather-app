@@ -67,6 +67,7 @@ VITE_APP_ID=your_openweathermap_api_key
 npm run dev
 ```
 
+**Folder Structure**
 ```bash
 src/
 ├── assets/            # Static icons
