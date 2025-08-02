@@ -128,7 +128,7 @@ return(
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-50 left-130 rounded-full bg-blue-300/30 hover:bg-blue-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-22 left-140 rounded-full bg-indigo-300/30 hover:bg-indigo-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-40 left-160 rounded-full bg-cyan-200/30 hover:bg-cyan-100/50 blur-2xl hover:scale-105 transition duration-500' />
-      <p className='absolute top-12 md:top-10 text-center text-white mb-5'><span style={{ fontFamily: '"Edu NSW ACT Cursive", cursive', fontSize: '28px'  }}>Veara</span> <br/> <span className='text-gray-300 text-lg font-light' style={{ fontFamily: ['"Truculenta"', 'sans-serif'], fontSize: '22px'  }}>Forecasting Tomorrow, Today</span></p>
+      <p className='absolute top-10 md:top-10 text-center text-white mb-5'><span style={{ fontFamily: '"Edu NSW ACT Cursive", cursive', fontSize: '28px'  }}>Veara</span> <br/> <span className='text-gray-300 text-lg font-light' style={{ fontFamily: ['"Truculenta"', 'sans-serif'], fontSize: '22px'  }}>Forecasting Tomorrow, Today</span></p>
 
     <div className='hidden md:flex absolute top-35 mt-1  gap-2 transform-gpu will-change-transform'>
       <div className="flex items-center gap-1 text-gray-300 bg-gradient-to-br from-black/30 to-black/50 text-sm font-medium px-1 rounded-xl backdrop-blur-[4px] hover:scale-105 hover:-translate-y-1 duration-500 shadow-2xl shadow-purple-400">
@@ -141,7 +141,7 @@ return(
         </div>
     </div>
 
-        <div className='flex md:hidden absolute top-35 mt-1 justify-between space-x-27 '>
+        <div className='flex md:hidden absolute top-29 mt-1 justify-between space-x-27 '>
       <div className="flex items-center gap-1 text-gray-100 bg-gradient-to-br from-black/30 to-black/50 text-sm font-medium px-1 rounded-xl backdrop-blur-[4px] border border-gray-200/50  shadow-2xl shadow-orange-500">
         <WiSunrise size={30} className='text-amber-400' />
           {(weatherData.sunrise) }
