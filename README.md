@@ -4,7 +4,7 @@
 
 ## 🔗 Live Demo
 
-👉 [Live Site](https://your-deployment-link.com)  
+👉 [Live Site](https://veara.vercel.app)  
 👉 [GitHub Repository](https://github.com/Ashwin-RH/weather-app)
 
 ---
@@ -13,7 +13,7 @@
 
 > Add a screenshot named `preview.png` in your project root to enable preview here
 
-![Preview](./preview.png)
+![Preview](public/weather.png)
 
 ---
 
