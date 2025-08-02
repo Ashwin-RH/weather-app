@@ -88,6 +88,7 @@ const Weather = () => {
       icon: icon,
       sunrise: formatUnixTime(data.sys.sunrise),
       sunset: formatUnixTime(data.sys.sunset),
+      country: data.sys.country,
     });
 
     // ✅ Await forecast to finish before stopping loader
@@ -188,7 +189,7 @@ return(
         <div> {weatherData.icon}</div> 
         <p className='text-white text-lg text-center'>{weatherData.condition}</p>
         <p className="text-white text-4xl text-center font-semibold">{weatherData.temperature}°C</p>
-        <p className="text-gray-300 text-md font-medium text-center mb-4">{weatherData.location}</p>
+        <p className="text-gray-300 text-md font-medium text-center mb-4">{weatherData.location}<span> ({weatherData.country})</span></p>
 
         <div className="flex justify-center ">
         <div className='w-full flex items-center justify-center border border-gray-200/50 bg-gray-500/20 hover:bg-gray-400/20 duration-500 hover:scale-101 transition-all transform-gpu will-change-transform rounded-xl p-4 mb-2 mx-3'>
