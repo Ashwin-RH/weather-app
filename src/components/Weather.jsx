@@ -101,12 +101,22 @@ const Weather = () => {
       return;
     }
 
-    const forecast = forecastJSON.list.slice(0, 5).map(item => ({
-      time: new Date(item.dt_txt).toLocaleTimeString([], { hour: '2-digit' }), // Add minute if needed
-      temp: Math.floor(item.main.temp),
-      desc: item.weather[0].description.replace(/\b\w/g, c => c.toUpperCase()),
-      icon: item.weather[0].icon
-    }));
+   const dailyMap = new Map();
+
+forecastJSON.list.forEach(item => {
+  const date = new Date(item.dt_txt).toLocaleDateString('en-IN');
+  if (!dailyMap.has(date)) {
+    dailyMap.set(date, item); // pick first slot of the day (can improve later)
+  }
+});
+
+const forecast = Array.from(dailyMap.values()).slice(0, 5).map(item => ({
+  day: new Date(item.dt_txt).toLocaleDateString('en-IN', { weekday: 'short' }), // Mon, Tue...
+  temp: Math.round(item.main.temp),
+  desc: item.weather[0].description.replace(/\b\w/g, c => c.toUpperCase()),
+  icon: item.weather[0].icon
+}));
+
 
     setForecastData(forecast);
   } catch (error) {
@@ -129,9 +139,9 @@ return(
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-50 left-130 rounded-full bg-blue-300/30 hover:bg-blue-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-22 left-140 rounded-full bg-indigo-300/30 hover:bg-indigo-200/50 blur-2xl hover:scale-105 transition duration-500' />
 <div className='hidden md:block absolute w-[150px] h-[150px] z-0 top-40 left-160 rounded-full bg-cyan-200/30 hover:bg-cyan-100/50 blur-2xl hover:scale-105 transition duration-500' />
-      <p className='absolute top-10 md:top-10 text-center text-white mb-5'><span style={{ fontFamily: '"Edu NSW ACT Cursive", cursive', fontSize: '28px'  }}>Veara</span> <br/> <span className='text-gray-300 text-lg font-light' style={{ fontFamily: ['"Truculenta"', 'sans-serif'], fontSize: '22px'  }}>Forecasting Tomorrow, Today</span></p>
+      <p className='absolute top-7 md:top-10 text-center text-white mb-5'><span style={{ fontFamily: '"Edu NSW ACT Cursive", cursive', fontSize: '28px'  }}>Veara</span> <br/> <span className='text-gray-300 text-lg font-light' style={{ fontFamily: ['"Truculenta"', 'sans-serif'], fontSize: '22px'  }}>Forecasting Tomorrow, Today</span></p>
 
-    <div className='hidden md:flex absolute top-35 mt-1  gap-2 transform-gpu will-change-transform'>
+    <div className='hidden md:flex absolute top-40 mt-1  gap-2 transform-gpu will-change-transform'>
       <div className="flex items-center gap-1 text-gray-300 bg-gradient-to-br from-black/30 to-black/50 text-sm font-medium px-1 rounded-xl backdrop-blur-[4px] hover:scale-105 hover:-translate-y-1 duration-500 shadow-2xl shadow-purple-400">
         <WiSunrise size={30} className='text-amber-400' />
           Sunrise: {(weatherData.sunrise) }
@@ -155,7 +165,7 @@ return(
 
 
      {/* Weather Card */}
-    <div className="z-10 mt-5 relative bg-gradient-to-br from-black/30 to-black/50  border border-gray-200/40 backdrop-blur-[4px]  rounded-2xl shadow-2xl ">
+    <div className="z-10 mt-5 relative  bg-gradient-to-br from-black/30 to-black/50  border border-gray-200/40 backdrop-blur-[4px]  rounded-2xl shadow-2xl ">
     
     {/* Search bar */}
     <div className=" flex items-center justify-center gap-2 mx-4 mt-4 md:mx-5 md:mt-3">
@@ -218,10 +228,10 @@ return(
       {forecastData.length > 0 && (
   <div className="w-80 md:w-90 max-w-full  px-1 pb-3 md:px-5 md:pb-5 bg-gradient-to-br from-black/30 to-black/50 border border-gray-400/40 mt-3 rounded-lg backdrop-blur-[4px] shadow-2xl shadow-black/50">
     <h2 className=" text-white text-lg font-semibold mb-2 text-center">Next Forecast</h2>
-    <div className="flex justify-between gap-2 overflow-x-hidden overflow-y-hidden scrollbar-hide  transition duration-500 cursor-pointer">
+    <div className="py-0 md:py-1 flex justify-between gap-2 overflow-x-hidden overflow-y-hidden scrollbar-hide  transition duration-500 cursor-pointer">
       {forecastData.map((item, index) => (
         <div key={index} className="flex flex-col items-center bg-white/10 rounded-lg p-2 text-white w-[70px]  hover:scale-103 duration-300 transition-all transform-gpu will-change-transform">
-          <p className="text-xs">{item.time}</p>
+          <p className="text-xs font-medium">{item.day}</p>
           <div className="w-5 h-5 flex items-center justify-center mt-1 mb-1">
             {allIcons[item.icon] || <LuCloud className="text-white w-5 h-5" />}
           </div>
