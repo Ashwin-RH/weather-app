@@ -142,7 +142,7 @@ return(
         </div>
     </div>
 
-        <div className='flex md:hidden absolute top-29 mt-1 justify-between space-x-27 '>
+        <div className='flex md:hidden z-10 absolute top-29 mt-1 justify-between space-x-27 '>
       <div className="flex items-center gap-1 text-gray-100 bg-gradient-to-br from-black/30 to-black/50 text-sm font-medium px-1 rounded-xl backdrop-blur-[4px] border border-gray-200/50  shadow-2xl shadow-orange-500">
         <WiSunrise size={30} className='text-amber-400' />
           {(weatherData.sunrise) }
